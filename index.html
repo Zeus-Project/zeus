@@ -4,10 +4,9 @@
 		<meta charset = "utf-8">
 		<title>Zeus</title>
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/prettify.css">
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="assets/js/index.js"></script>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="assets/js/index.js"></script>
 	</head>
 
 	<body>
@@ -92,19 +91,22 @@
         <div class="row">
             <div class="container">
                 <div class="col-12">
-                    <div class="sizes col-12 no-padding">
-                        <p class="title-samples">Example</p>
-                        <input id="input-resolution" placeholder="650px">
-                        <ul class="sizes-examples">
-                            <li data-size="350px" id="mobile"></li>
-                            <li data-size="800px" id="ipad"></li>
-                            <li class="active" data-size="970px" id="desktop"></li>
-                        </ul>                        
+                    <div class="sizes-background col-12 no-padding">
+                        <div class="sizes col-12 no-padding">
+                            <p class="title-samples">Example</p>
+                            <input id="input-resolution" value="970px">
+                            <ul class="sizes-examples">
+                                <li class="mobile" data-size="320px"></li>
+                                <li class="ipad" data-size="768px"></li>
+                                <li class="desktop active" data-size="970px"></li>
+                            </ul>                        
+                        </div>
+                        <div class="iframe-wrapper col-12 no-padding">
+                            <iframe src="http://w3bits.com/labs/css-responsive-nav/" id="iframe"></iframe>
+                        </div>
                     </div>
-                    <div class="iframe-wrapper">
-                        <iframe src="http://w3bits.com/labs/css-responsive-nav/" id="iframe"></iframe>
-                    </div>
-                    <div class="code">
+
+                    <div class="code col-12 no-padding">
                         <xmp class="prettyprint">
         <div class="dropup">
             <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" 
