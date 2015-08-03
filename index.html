@@ -3,138 +3,351 @@
 	<head>
 		<meta charset = "utf-8">
 		<title>Zeus</title>
-		<link rel="stylesheet" href="assets/css/main.css">
-		<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-		<script scr ="assets/js/index.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/prettify.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/index.js"></script>
 	</head>
 
 	<body>
 	<header>
-		<div class="wrapper">
-			<h1>Infojobs</h1>
-			<nav>
-				<ul>
-					<li>
-						<a href="#">Menu</a>
-					</li>
-					<li>
-						<a href="#">Menu</a>
-					</li>
-					<li>
-						<a href="#">Menu</a>
-					</li>
-					<li>
-						<a href="#">Menu</a>
-					</li>
-				</ul>
-			</nav>
+		<div class="row">
+            <div class="container">
+    			<div class="col-2 no-padding">
+    				<h1 class="logo"><a href="#">Infojobs</a></h1>
+    			</div>
+    			<div class="col-10">
+    				<nav class="main-menu"> 
+    					<ul>
+    						<li class="active">
+    							<a href="#">Getting started</a>
+    						</li>
+    						<li>
+    							<a href="#">CSS</a>
+    						</li>
+    						<li>
+    							<a href="#">Components</a>
+    						</li>
+    						<li>
+    							<a href="#">JavaScript</a>
+    						</li>
+    					</ul>
+    				</nav>
+                </div>
+            </div>
 		</div>
 	</header>
 
-	<section>
-		<h1>Page Title</h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nisi. Fugiat velit culpa recusandae! Quis vel, dicta nostrum facere non veniam sapiente obcaecati pariatur numquam, vitae reprehenderit dolorem asperiores unde.</h2>
+	<section class="title">
+		<div class="row">
+        <div class="container">
+            <div class="col-8">
+                <h1>Getting started</h1>
+                <h2>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</h2>
+            </div>
+        </div>
+    </div>
 	</section>
 
-	<section>
-		<h1>Section title</h1>
-		<p class="separator">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus doloribus voluptas expedita quidem ipsum, voluptatibus inventore perspiciatis obcaecati nulla, cupiditate esse, repellendus vitae? Minima, itaque, officiis? Alias ab, fugit aspernatur.</p>
-		
-		<h2>Subsection title</h2>
-		<p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Minima <span class="featured">similique</span> dignissimos a modi, illo, harum totam quasi adipisci natus aspernatur animi ipsa, perspiciatis temporibus alias nobis omnis aperiam earum quae.</p>
-
+	<section class="content">
+		<div class="row">
+    <div class="container">
+        <div class="col-8">
+            <h1>Download <span class="version">v2.3</span></h1>
+      <p>Bootstrap (currently v3.3.5) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
+              <div class="button button-black"><a href="#">View on github</a></div>
+                <div class="button button-red"><a href="#">View on npm</a></div>
+                <div class="button button-blue"><a href="#">button</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-12">
+                <div  class="divider"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-12">
+                <h2>Bootstrap CDN</h2>
+                <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span. Just use these Bootstrap CDN links.</p>
+                <p>Lorem ipsum dolor sit amet,  adipisicing elit. Minima > dignissimos a modi, illo, harum totam quasi adipisci natus aspernatur animi ipsa, perspiciatis temporibus alias nobis omnis aperiam earum quae.</p>
+            </div>
+            
+            <div class="col-12">
+                <div class="message info">
+                    <h4>Small title with color</h4>
+                    <p>Due to long-standing shortcomings/bugs in Chrome (see issue 262171 in the Chromium bug tracker) and Internet Explorer (see this article on in-page links and focus order), you will need to make sure that the target of your skip link is at least programmatically focusable by adding <span class="featured">tabindex="-1".</span></p>
+                </div>
+                 <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span. Just use these Bootstrap CDN links.</p>
+            </div>
+        </div>
+    </div>
+</div>
 	</section>
 
-	<section>
-		 <table>
-		   <caption>My table caption</caption>
-		   <thead>
-		      <tr>
-		         <th colspan="2">Class</th>
-		         <th colspan="2">Effects</th>
-		         <th colspan="2">Comment</th>
-		      </tr>
-		      <tr>
-		         <th>Column 2a</th>
-		         <th>Column 2b</th>
-		      </tr>
-		   </thead>
-		   <tbody>
-		      <tr>
-		         <th rowspan="2">Row 1</th>
-		         <th>Row 1a</th>
-		         <td>123</td>
-		         <td>456</td>
-		         <td>789</td>
-		      </tr>
-		      <tr>
-		         <th>Row 1b</th>
-		         <td>123</td>
-		         <td>456</td>
-		         <td>789</td>
-		      </tr>
-		      <tr>
-		         <th colspan="2">Row 2</th>
-		         <td>123</td>
-		         <td>456</td>
-		         <td>789</td>
-		      </tr>
-		   </tbody>
-		</table>
+    <section class="codes">
+        <div class="row">
+            <div class="container">
+                <div class="col-12">
+                    <div class="sizes col-12 no-padding">
+                        <p class="title-samples">Example</p>
+                        <input id="input-resolution" placeholder="650px">
+                        <ul class="sizes-examples">
+                            <li data-size="350px" id="mobile"></li>
+                            <li data-size="800px" id="ipad"></li>
+                            <li class="active" data-size="970px" id="desktop"></li>
+                        </ul>                        
+                    </div>
+                    <div class="iframe-wrapper">
+                        <iframe src="http://w3bits.com/labs/css-responsive-nav/" id="iframe"></iframe>
+                    </div>
+                    <div class="code">
+                        <xmp class="prettyprint">
+        <div class="dropup">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropup
+              <span class="caret"></span><!-- Beer un euro hamigo-->
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+                        </xmp>
+                        <span id="copy-content">Copy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+	<section class="table-content">
+		<div class="row">
+                    <div class="container">
+                        <div class="col-12">
+    		            <table class="table table-striped">
+			        <thead>
+			            <tr>
+			                <th class="col-3">Feature</th>
+			                <th class="col-6">Internet Explorer 8</th>
+			                <th class="col-3">Internet Explorer 9</th>
+			            </tr>
+			        </thead>
+			        <tbody>
+			            <tr>
+                            <td class="col-3"><span class="featured">border-radius</span></td>
+			                <td class="col-6"> Not supported</td>
+			                <td class="col-3"> Supported</td>
+			                </tr>
+			            <tr>
+                        <td class="col-3"><span class="featured">box-shadow</span></td>
+			                <td class="col-6"> Not supported</td>
+			                <td class="col-3">Supported</td>
+			            </tr>
+			            <tr>
+			                <td class="col-3"><span class="featured">transform</span></td>
+			                <td class="col-6"> Not supported</td>
+                            <td class="col-3">Supported</td>
+			            </tr>
+                        <tr>
+                            <td class="col-3"><span class="featured">transition</span></td>
+                            <td class="col-6"> Not supported</td>
+                            <td class="col-3">Supported</td>
+                        </tr>
+                        <tr>
+                            <td class="col-3"><span class="featured">placeholder</span></td>
+                            <td class="col-6"> Not supported</td>
+                            <td class="col-3">Supported</td>
+                        </tr>
+			        </tbody>
+			    </table>
+                        </div>
+                    </div>
+                </div>
 	</section>
+    <div class="row">
+        
+    <section class="table-content">
+        <div class="row">
+                    <div class="container">
+                        <div class="col-12">
+                            <p>Bootstrap (currently v3.3.5) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
 
-	<section>
-		<div class="message info">
-			<h4>small title with color</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eveniet praesentium est quia excepturi, dolorum minus similique aperiam temporibus, laudantium blanditiis unde quam rem corrupti quo velit voluptatum atque dolores.</p>
-		</div>
-		<div class="message warning">
-			<h4>small title with color</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eveniet praesentium est quia excepturi, dolorum minus similique aperiam temporibus, laudantium blanditiis unde quam rem corrupti quo velit voluptatum atque dolores.</p>
-		</div>
-		<div class="message error">
-			<h4>small title with color</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eveniet praesentium est quia excepturi, dolorum minus similique aperiam temporibus, laudantium blanditiis unde quam rem corrupti quo velit voluptatum atque dolores.</p>
-		</div>
-	</section>
+                            <div class="message warning">
+                                <h4>Only one plugin per element via data attributes</h4>
+                                <p>Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.</p>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="col-3">Feature</th>
+                                        <th class="col-6">Internet Explorer 8</th>
+                                        <th class="col-3">Internet Explorer 9</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-3"><span class="featured">border-radius</span></td>
+                                        <td class="col-6"> Not supported</td>
+                                        <td class="col-3"> Supported</td>
+                                        </tr>
+                                    <tr>
+                                    <td class="col-3"><span class="featured">box-shadow</span></td>
+                                        <td class="col-6"> Not supported</td>
+                                        <td class="col-3">Supported</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-3"><span class="featured">transform</span></td>
+                                        <td class="col-6"> Not supported</td>
+                                        <td class="col-3">Supported</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-3"><span class="featured">transition</span></td>
+                                        <td class="col-6"> Not supported</td>
+                                        <td class="col-3">Supported</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-3"><span class="featured">placeholder</span></td>
+                                        <td class="col-6"> Not supported</td>
+                                        <td class="col-3">Supported</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="message error">
+                            <h4>Third-party libraries</h4>
+                                <p>Bootstrap does not officially support third-party JavaScript libraries like Prototype or <strong>jQuery</strong> UI. Despite .noConflict and namespaced events, there may be compatibility problems that you need to fix on your own.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
 
-	<section>
-		<div class="button black"><a href="#">View on github</a></div>
-		<div class="button red"><a href="#">View on github</a></div>
-		<div class="button blue"><a href="#">View on github</a></div>
-		<div class="button arrow"><a href="#">View on github</a></div>
-	</section>
+    <section class="grid">
+        <div class="row">
+            <div class="container">
+                <div class="col-12">
+                    <h2>Bootstrap CDN</h2>
+                    <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span. Just use these Bootstrap CDN links.</p>
+                    <p>Lorem ipsum dolor sit amet,  adipisicing elit. Minima > dignissimos a modi, illo, harum totam quasi adipisci natus aspernatur animi ipsa, perspiciatis temporibus alias nobis omnis aperiam earum quae.</p>
+                </div>
+                
+                <div class="col-12">
+                    <div class="message info">
+                        <h4>Small title with color</h4>
+                        <p>Due to long-standing shortcomings/bugs in Chrome (see issue 262171 in the Chromium bug tracker) and Internet Explorer (see this article on in-page links and focus order), you will need to make sure that the target of your skip link is at least programmatically focusable by adding <span class="featured">tabindex="-1".</span></p>
+                    </div>
 
-	<aside>
-		<nav>
+                     <p>The folks over at MaxCDN graciously provide CDN for <a href="#">Bootstrap's</a> CSS and <span class="featured">Javascript</span. Just use these Bootstrap CDN links.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="col-12 no-padding">
+                    <div class="col-4"><div class="polygon"></div></div>
+                    <div class="col-4"><div class="polygon"></div></div>
+                    <div class="col-4"><div class="polygon"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container"> 
+                <div class="col-12 no-padding">
+                    <div class="col-8"><div class="polygon"></div></div>
+                    <div class="col-4"><div class="polygon"></div></div>
+                </div>
+            </div> 
+        </div> 
+        <div class="row">
+            <div class="container">
+                <div class="col-12 no-padding">
+                    <div class="col-4"><div class="polygon"></div></div>
+                    <div class="col-8"><div class="polygon"></div></div>
+                </div>
+            </div>
+        </div>
+            
+    </section>
+
+    <div class="button-arrow arrow"><a href="#"></a></div>
+
+
+	<aside class="menu-float">                        
+		<nav class="nav-float">
 			<ul>
-				<li>
-					<a href="#">Menu</a>
-				</li>
-			</ul>
-		</nav>
+                <li>
+                    <a href="#">Blurbs</a>
+                </li>
+                <li class="active-submenu">
+                    <a href="#">Buttons</a>
+                    <ul class="submenu">
+                        <li class="active">
+                            <a href="">Item 1</a>
+                        </li>
+                        <li>
+                            <a href="">Item 2</a>
+                        </li>
+                        <li>
+                            <a href="">Item 3</a>
+                        </li>
+                    </ul>
+		        </li>
+		    <li>
+			    <a href="#">Cards</a>
+		    </li>
+		    <li>
+			    <a href="#">Form Elements</a>
+        	</li>
+		    <li>
+		       <a href="#">Grid system</a>
+            </li>
+	        <li>
+			     <a href="#">Image headings</a>
+            </li>
+            <li>
+			     <a href="#">Labels</a>
+            </li>
+            <li>
+        	     <a href="#">Links</a>
+            </li>
+            <li>
+			    <a href="#">Lists</a>
+            </li>
+            <li>
+			    <a href="#">Modals</a>
+            </li>      
+            <li>
+  				<a href="#">Navbars</a>
+            </li>
+            <li>
+     			<a href="#">Panels</a>
+            </li>
+            <li>
+                <a href="#">Search</a>
+            </li>
+            <li>
+                <a href="#">Sliders</a>
+            </li>      
+            <li>
+                <a href="#">Tables</a>
+            </li>
+            <li>
+                <a href="#">Toasts</a>
+            </li>
+            <li>
+                <a href="#">Tooltips</a>
+            </li>
+        </ul>
+    </nav>
 	</aside>
-
-	<footer>
-		<h1><a class="logo" href="#">Infojobs</a></h1>
-		<nav>
-			<ul>
-				<li>
-					<a href="#">Menu</a>
-				</li>
-				<li>
-					<a href="#">Menu</a>
-				</li>
-				<li>
-					<a href="#">Menu</a>
-				</li>
-				<li>
-					<a href="#">Menu</a>
-				</li>
-			</ul>
-		</nav>
-	</footer>
 
 	</body>
 	</html>
