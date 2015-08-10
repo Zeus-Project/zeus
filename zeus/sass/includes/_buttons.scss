@@ -8,7 +8,7 @@ section.buttons{
 .button{
     text-transform:uppercase;
     display:inline-block;
-    margin:20px 20px 0px 0;
+    margin:20px 0 20px 0;
     border-radius: 2px;
     font-weight:$font-bold;
     a{
@@ -40,6 +40,14 @@ section.buttons{
             }
         }
     }
+}
+
+.small{
+    margin:20px 20px 0 0;
+}
+    
+.large{
+    margin: 20px 0 20px 0;
 }
 
 .button-red{
@@ -109,14 +117,13 @@ section.buttons{
 .button-arrow{
     display:inline-block;
     border-radius:50px;
-    background-color:$color-white;
     vertical-align: middle;
     -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.20);
     -moz-box-shadow: 0 2px 10px 0 rgba(0,0,0,.20);
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.20);
     position: fixed;
-    bottom: 2em;
-    right: 40px;
+    bottom: 50px;
+    right: 45px;
     display: none;
     a{
         display:block;
@@ -131,11 +138,12 @@ section.buttons{
 }
 .arrow{
     color:$color-gray;
-    background: url(../img/ico_zeus.png) -259px -38px no-repeat;
+    background: url(../img/ico_zeus.png) -259px -38px no-repeat $color-white;
     height: 50px;
     width: 50px;
     cursor:pointer;
+    z-index: 999;
     &:hover{
-        background: url(../img/ico_zeus.png) -259px 12px no-repeat;
+        background: url(../img/ico_zeus.png) -259px 12px no-repeat $color-white;
     }
 }

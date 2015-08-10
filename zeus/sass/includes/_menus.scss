@@ -21,38 +21,82 @@
         }
 
     }
-    #picto-img{
-        height: 29px;
-        width: 30px;
-        cursor: pointer;
-        top: -5px;
-        right: 0;
-        position: absolute;
+}
+
+#picto-img{
+    height: 29px;
+    width: 30px;
+    cursor: pointer;
+    top: -5px;
+    right: 17px;
+    position: absolute;
+    @media (max-width: 1199px){
+        right: -5px;
     }
 }
 
+.svghover{
+    &:hover{
+        fill: $color-blue;
+    }
+}
+
+.container-menu{
+    position: relative;
+
+    @media (max-width: 1260px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        backface-visibility: hidden;
+        width: 100%;
+        margin: 0;
+        background-color: lime;
+    }
+
+    &.isFixed {      
+        @media (min-width: 1261px){
+            position: fixed;
+            top: 0;
+            z-index: 999;
+            backface-visibility: hidden;
+            width: 1230px;
+            margin: 0 auto;
+        }
+    }
+
+}
+
 .menu-float{
-    position:fixed;
-    top:210px;
-    right:40px;
+    position: absolute;
+    z-index: 999;
+    width: 200px;
     padding: 20px 25px;
     background-color: $color-white;
     -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
     -moz-box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
-    z-index: 999;
-    @media (max-width: $max-size){
-        right:-80px;
+    transition: right 0.5s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    .isFixed & {
+        top: 50px;
+    }
+    @media (max-width: 1260px){
+        top: 210px;
+        left: 997px;
+        width: 180px;
+    }
+    @media (max-width: 1199px){
+        right: -160px;
+        left: auto;
         &:hover{
-            animation-name: example;
-            animation-duration: 1s;
-            right:40px;
-        }
-        @keyframes example{
-            0%   {right: -80px;}
-            100% {right: 40px;}
+            right: 0px;
         }
     }
+
     nav.nav-float{
         ul{
             li{
@@ -71,6 +115,7 @@
                     }
                 }
                 ul.submenu{
+                    display: none;
                     margin:15px 0px 15px 20px;
                     li{
                         font-size: $min-font-size;
@@ -79,13 +124,20 @@
                             &:hover{
                                 color:$color-black;
                             }
+                            &.active{
+                                color:$color-blue;
+                            }
+
                         }
                     }
                 }
             }
-            li.active-submenu {
-                > a{
+            li {
+                > a.active{
                     color:$color-blue;
+                    + ul.submenu{
+                        display:block;
+                    }
                 }
             }
         }
@@ -120,25 +172,11 @@
 }
 
 .rotated-left {
-    -webkit-transform: rotate(180deg); 
-    -moz-transform: rotate(180deg); 
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg); 
     transform: rotate(180deg); 
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }
 
 .rotated-right {
-    -webkit-transform: rotate(-180deg); 
-    -moz-transform: rotate(-180deg); 
-    -ms-transform: rotate(-180deg);
-    -o-transform: rotate(-180deg); 
     transform: rotate(-180deg); 
-    -webkit-transition-duration: 0.5s;
-    -moz-transition-duration: 0.5s;
-    -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
 }

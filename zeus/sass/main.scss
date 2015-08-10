@@ -25,9 +25,9 @@ body {
   font-weight: $global-font-weight;
   background: $global-background-color;
   padding: 0 0 50px 0;
+  overflow-x: hidden;
   &.home{
     background-color: $color-blue;
-    min-height: 100%;
   }
 }
 
@@ -120,4 +120,16 @@ a{
     max-width: 100%;
 }
 
-
+.center{
+    width: 1230px;
+    margin: 0 auto;
+    position: relative;
+    @media (max-width: 1260px){
+        width: 1175px;
+        transition: width 0.5s;
+        margin: 0 0 0 7px;
+    }
+    @media (max-width: 1199px){
+        width: auto;
+    }
+}

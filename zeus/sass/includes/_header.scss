@@ -2,7 +2,9 @@ header{
 	background-color: $color-white;
 	padding: 20px 0 0 16px;
     height: 60px;
-
+    @media (max-width: 1260px){
+        padding: 20px 15px 0 13px;
+    }
 	h1.logo{
         display:inline-block;
         vertical-align:middle;
@@ -22,6 +24,7 @@ header{
 }
 header.light{
     background-color: $color-dark-blue;
+    padding: 20px 15px 0 16px;
     .main-menu{
         a{
             color: $color-white;

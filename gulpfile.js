@@ -9,7 +9,6 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     del = require('del');
 
-
 gulp.task('styles', function() {
   return sass('zeus/sass/main.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
@@ -28,23 +27,15 @@ gulp.task('scripts', function() {
     .pipe(notify({ message: 'Scripts completados' }));
 });
 
-gulp.task('images', function() {
-  return gulp.src('zeus/img/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('assets/img'))
-    .pipe(notify({ message: 'Images completado' }));
-});
-
 gulp.task('clean', function(cb) {
-    del(['assets/css', 'assets/js', 'assets/img'], cb)
+    del(['assets/css', 'assets/js'], cb)
 });
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images');
+    gulp.start('styles', 'scripts');
 });
 
 gulp.task('watch', function() {
   gulp.watch('zeus/sass/**/*.scss', ['styles']);
   gulp.watch('zeus/js/**/*.js', ['scripts']);
-  gulp.watch('zeus/img/**/*', ['images']);
 });
