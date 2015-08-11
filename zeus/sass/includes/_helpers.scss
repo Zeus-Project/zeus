@@ -3,6 +3,9 @@
 // ==========================================================================
 
 .no-margin { margin: 0; }
+.no-bottom{
+    margin-bottom: 0px;
+}
 .no-padding { padding: 0; }
 .featured{
     background-color: $color-dark-pink;

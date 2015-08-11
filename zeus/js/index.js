@@ -7,16 +7,32 @@ $(document).ready(function () {
 
   /* Resize Iframe */ 
   $('.sizes ul li').click(function() {
+    var iframeID = $('#'+$(this).parent().parent().attr('id'));
     var iframeW = parseInt($(this).attr('data-size'), 10);
-    $('.sizes ul li.active').removeClass('active');
+
+    iframeID.find('.active').removeClass('active');
     $(this).addClass('active');
-    resizeIframe(iframeW);
+
+    resizeIframe(iframeW,iframeID);
   });
 
   $('.input-resolution').on("change paste", function() {
     var vpWidth = $(this).val();
-    $('.sizes ul li.active').removeClass('active');
-    resizeIframe(vpWidth);
+    var iframeID = $('#'+$(this).parent().attr('id'));
+
+    iframeID.find('.active').removeClass('active');
+    switch(vpWidth){
+      case '970':
+          iframeID.find('.desktop').addClass('active');
+          break;
+      case '768':
+          iframeID.find('.ipad').addClass('active');
+          break;
+      case '320':
+          iframeID.find('.mobile').addClass('active');
+          break;
+    }
+    resizeIframe(vpWidth,iframeID);
   });
 
   $('#picto-img').click(function() {
@@ -58,7 +74,9 @@ $(document).ready(function () {
 
   var client = new ZeroClipboard($('.copy-content'));
   client.on( 'copy', function(event) {
-    event.clipboardData.setData('text/plain', $('.codebox').html());
+    alert($(this).html());
+    $codebox = $('.codebox');
+    event.clipboardData.setData('text/plain', $codebox.html());
   });
   client.on( 'aftercopy', function(event) {
     $('.zeroclipboard-is-hover').prop('title', 'Copied!');

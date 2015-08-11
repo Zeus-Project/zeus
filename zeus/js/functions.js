@@ -1,7 +1,8 @@
  /* Funciones */
- function resizeIframe(iframeW) {
+ function resizeIframe(iframeW,iframeID) {
+
      /* Capamos las medidas */
-     var $iframe = $('.iframe');
+     var $iframe = iframeID.parent().find('.iframe-wrapper .iframe');
      var currentIframe = $iframe.width() + 42;
      if (iframeW > 970 || iframeW < 320 || iframeW == currentIframe) {
          return false;
@@ -13,10 +14,10 @@
              $iframe.css('border-right', '1px solid #e2e5e6');
          }
          /* Hacemos el resize */
-         $('.iframe, .sizes').animate({
+         $(iframeID).add($iframe).animate({
              width: iframeW
          }, 500);
-         var inputResolution = $('.input-resolution');
+         var inputResolution = iframeID.find('.input-resolution');
          inputResolution.prop('Counter', $iframe.width() + 41).animate({
              Counter: iframeW
          }, {
@@ -33,10 +34,10 @@
      var duration = 500;
      if ($(this).scrollTop() > 160) {
          $('.container-menu').addClass('isFixed');
-         $('.button-arrow').fadeIn(duration);
+         $('.container-button-arrow').fadeIn(duration);
      } else {
          $('.container-menu').removeClass('isFixed');
-         $('.button-arrow').fadeOut(duration);
+         $('.container-button-arrow').fadeOut(duration);
      }
  }
 
@@ -46,12 +47,13 @@
          var currLink = $(this);
          var refElement = $(currLink.attr("href"));
          if (refElement.length) {
-             if (refElement.position().top <= scrollPos) {
-                 $('.nav-float ul li a').removeClass("active");
+
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.nav-float ul li a').removeClass("active");
+                currLink.addClass("active");
                  if (!(currLink.parent().parent().hasClass('submenu'))) {
                      $('.display-block').removeClass("display-block");
                  };
-                 currLink.addClass("active");
                  currLink.parent().find('.submenu').addClass('display-block');
              } else {
                  currLink.removeClass("active");

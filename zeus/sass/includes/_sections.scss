@@ -27,7 +27,28 @@ section.content{
     }
     h2{
         font-weight:$font-bold;
-    }   
+    }
+    .fonts{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        color: $color-black;
+        h1{
+            font-size: 120px;
+            line-height: 100px;
+            font-weight: 300;
+        }
+        h2{
+            font-weight: 300;
+        }
+        p{
+            color: $color-black;
+            font-weight: 300;
+        }
+        &.bold{
+            font-weight: 700;
+        }
+    }
 }
 section.grid{
     .row{

@@ -42,6 +42,41 @@
 }
 
 .container-menu{
+
+    position: relative;
+
+    //height: 4px; background-color: lime; //test
+
+    &.isFixed {  
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        backface-visibility: hidden;
+
+        @media (min-width: 1200px){            
+            //from .center class
+            width: 1230px;
+            margin: 0 auto;
+
+            //background-color: red; //test
+        }
+        //from .center class
+        @media (max-width: 1260px){
+            width: 1175px;
+        }
+
+        @media (max-width: 1199px){
+            left: 0;
+            width: 100%;
+            margin: 0;
+
+            //background-color: yellow; //test
+        }
+    }
+
+
+    /* old papito 10/08
+
     position: relative;
 
     @media (max-width: 1260px){
@@ -52,7 +87,7 @@
         backface-visibility: hidden;
         width: 100%;
         margin: 0;
-        background-color: lime;
+        //background-color: lime;
     }
 
     &.isFixed {      
@@ -66,32 +101,82 @@
         }
     }
 
+    */
+
+}
+
+.container-button-arrow{
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    backface-visibility: hidden;
+    display: none;
+
+    //height: 4px; background-color: lime; //test
+
+    .button-arrow {
+        position: absolute;
+        bottom: 50px;
+        right: 20px;
+        
+        //para mantener la coherencia con la separacion del menu con respecto al container que hemos hecho en este breakpoint
+        @media (min-width: 1200px) and (max-width: 1260px){
+            right: 5px;
+        }
+    }
+   
+    @media (min-width: 1200px){        
+        //from .center class
+        width: 1230px;
+        margin: 0 auto;
+
+        //background-color: red; //test
+    }
+    //from .center class
+    @media (max-width: 1260px){
+        width: 1175px;
+    }
+
+    @media (max-width: 1199px){
+        left: 0;
+
+        width: 100%;
+        margin: 0;
+
+        //background-color: yellow; //test
+    }
 }
 
 .menu-float{
+
+    $menu-initial-top-position: 70px;
     position: absolute;
     z-index: 999;
-    width: 200px;
-    padding: 20px 25px;
+     
     background-color: $color-white;
     -webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
     -moz-box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
     box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
     transition: right 0.5s ease-in-out;
-    position: absolute;
+
+    //comun para todos los breakpoints
+    width: 200px;
+    padding: 20px 25px;
     right: 0;
-    top: 80px;
+    top:  $menu-initial-top-position;     
     .isFixed & {
-        top: 50px;
+        top:  $menu-initial-top-position - 34;
     }
+
+    //separacion del menu con respecto al container
     @media (max-width: 1260px){
-        top: 210px;
-        left: 997px;
+        right: 5px;
         width: 180px;
     }
+
+    //ocultacion del menu
     @media (max-width: 1199px){
         right: -160px;
-        left: auto;
         &:hover{
             right: 0px;
         }
