@@ -13,33 +13,29 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
   return sass('zeus/sass/main.scss', { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
-    .pipe(gulp.dest('assets/css'))
+    .pipe(gulp.dest('dist/assets/css'))
     .pipe(minifycss())
-    .pipe(gulp.dest('assets/css'))
+    .pipe(gulp.dest('dist/assets/css'))
     .pipe(notify({ message: 'Styles completados' }));
 });
 
 gulp.task('scripts', function() {
   return gulp.src('zeus/js/**/*.js')
     .pipe(concat('index.js'))
-    .pipe(gulp.dest('assets/js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
-    .pipe(gulp.dest('assets/js'))
+    .pipe(gulp.dest('dist/assets/js'))
     .pipe(notify({ message: 'Scripts completados' }));
 });
 
 gulp.task('images', function() {
   return gulp.src('zeus/img/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('assets/img'))
+    .pipe(gulp.dest('dist/assets/img'))
     .pipe(notify({ message: 'Images completado' }));
 });
 
-gulp.task('clean', function(cb) {
-    del(['assets/css', 'assets/js', 'assets/img'], cb)
-});
-
-gulp.task('default', ['clean'], function() {
+gulp.task('default', function() {
     gulp.start('styles', 'scripts', 'images');
 });
 
