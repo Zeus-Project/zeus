@@ -1,8 +1,8 @@
 // ==========================================================================
 // Messages
 // ==========================================================================
-section.messages{
-  padding:0;
+section.messages {
+  padding: 0;
 }
 .message {
   font-family: $global-font-family;
@@ -21,24 +21,21 @@ section.messages{
     margin-bottom: 10px;
   }
 }
-
 .message.error {
-  	border-left: $message-border solid $color-red;
-  	h4 {
-  		color: $message-color-red;
-  	}
+  border-left: $message-border solid $color-red;
+  h4 {
+    color: $message-color-red;
+  }
 }
-
-.message.warning{
-  	border-left: $message-border solid $color-yellow;
-  	h4 {
-  		color: $color-yellow;
-  	}
+.message.warning {
+  border-left: $message-border solid $color-yellow;
+  h4 {
+    color: $color-yellow;
+  }
 }
-
-.message.info{
-  	border-left: $message-border solid $color-light-blue;
-  	h4 {
-  		color: $color-light-blue;
-  	}
+.message.info {
+  border-left: $message-border solid $color-light-blue;
+  h4 {
+    color: $color-light-blue;
+  }
 }

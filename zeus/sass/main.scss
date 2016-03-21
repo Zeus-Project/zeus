@@ -1,6 +1,6 @@
-/* 
+/*
 Zeus Project
-Version: 1.0  
+Version: 1.0
 */
 
 @import 'includes/_reset';
@@ -25,13 +25,14 @@ body {
   font-weight: $global-font-weight;
   background: $global-background-color;
   padding: 0 0 50px 0;
+
   &.home{
     background-color: $color-blue;
     min-height: 100%;
   }
 }
 
-h1{
+h1 {
     font-size: $h1-font-size;
     color: $color-black;
     font-weight: $font-bold;
@@ -39,7 +40,8 @@ h1{
     line-height:$h1-lh;
     margin-bottom:10px;
 }
-h2{
+
+h2 {
     font-size: $h2-font-size;
     line-height:$h2-lh;
     color: $color-black;
@@ -47,35 +49,40 @@ h2{
     font-family: $global-font-family;
     margin-bottom:10px;
 }
-h3{
+
+h3 {
     font-size: $h3-font-size;
     line-height:$h3-lh;
     color: $color-black;
     font-weight: $font-regular;
     font-family: $global-font-family;
 }
-h4{
+
+h4 {
     font-size: $h4-font-size;
     line-height:$h4-lh;
     color: $color-black;
     font-weight: $font-regular;
     font-family: $global-font-family;
 }
-h5{
+
+h5 {
     font-size: $h5-font-size;
     line-height:$h5-lh;
     color: $color-black;
     font-weight: $font-regular;
     font-family: $global-font-family;
 }
-h6{
+
+h6 {
     font-size: $h6-font-size;
     line-height:$h6-lh;
     color: $color-black;
     font-weight: $font-regular;
     font-family: $global-font-family;
 }
-p{
+
+p {
     font-size: $global-font-size;
     line-height:$global-line-height;
     color: $color-gray;
@@ -83,11 +90,11 @@ p{
     font-family: $global-font-family;
 }
 
-strong{
+strong {
     font-weight: $font-bold;
 }
 
-.version{
+.version {
     font-size: $global-font-size;
     line-height:$global-line-height;
     color: $color-gray;
@@ -101,17 +108,17 @@ strong{
     top: -4px;
 }
 
-.row{
+.row {
 	margin: 0 auto;
 }
 
-.divider{
+.divider {
     border-bottom:1px solid $color-light-gray;
     padding-bottom:20px;
     margin-bottom:40px;
 }
 
-a{
+a {
     color:$color-blue;
 }
 
@@ -119,5 +126,3 @@ a{
     margin: 50px 0px 10px 0px;
     max-width: 100%;
 }
-
-
